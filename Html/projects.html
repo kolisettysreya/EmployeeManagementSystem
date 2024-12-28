@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Page</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            align-items: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            outline: auto;
+
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 20px 20px;
+            border: none;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .checkbox-item {
+            margin-right: 20px;
+            margin-bottom: 40px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><u>PROJECTS</u></h1>
+
+        <button class="button">Add Project</button>
+
+        <div class="checkbox-container">
+            <div class="checkbox-item">
+                <input type="checkbox" id="project1">
+                <label for="project1">Project 1</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project2">
+                <label for="project2">Project 2</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project3">
+                <label for="project3">Project 3</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project4">
+                <label for="project4">Project 4</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project5">
+                <label for="project5">Project 5</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project6">
+                <label for="project6">Project 6</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="project7">
+                <label for="project7">Project 7</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-button" onclick="hideSelectedCheckbox()">Submit</button>
+    </div>
+    <script>
+        function hideSelectedCheckbox() {
+            const checkboxes = document.querySelectorAll('.checkbox-item input[type="checkbox"]');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = false; 
+            });
+        }
+    </script>
+</body>
+</html>

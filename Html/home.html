@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two-Part Layout</title>
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 1fr 3fr; 
+      height: 100vh; 
+      margin: 0; 
+    }
+
+    .dashboard {
+      background-color: hsl(0, 7%, 5%); 
+      padding: 1rem;
+      display: flex; 
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .dashboard-title {
+      color: white;
+      font-size: 2rem;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+      margin-bottom: 5rem;
+      text-align: center; 
+    }
+
+    .dashboard-buttons {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      margin: 0.5rem;
+      cursor: pointer;
+      gap: 1rem;
+      font-size: 2rem;
+      font-family:'Times New Roman', Times, serif ;
+    }
+    .button {
+      width: 90%;
+      padding: 10px;
+      background-color: grey; 
+      color: white;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+    }
+    .content {
+      background-color: #fff; 
+      padding: 1rem; 
+    }
+    iframe {
+    border: none; 
+    }
+    .content-header {
+      display: flex;
+      justify-content: flex-end; 
+      margin-bottom: 1rem; 
+    }
+
+    .logout-button {
+      background-color: hsl(0, 11%, 2%); 
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+      <h2 class="dashboard-title">DASHBOARD</h2>
+      <div class="dashboard-buttons">
+          <a href="#" class="button" onclick="loadContent('profile.html')">PROFILE</a>
+          <a href="#" class="button" onclick="loadContent('contact.html')">CONTACT US</a>
+          <a href="#" class="button" onclick="loadContent('employee.html')">EMPLOYEE</a>
+          <a href="#" class="button" onclick="loadContent('projects.html')">PROJECTS</a>
+      </div>
+  </div>
+  <div class="content">
+    <div class="content-header"> 
+      <button class="logout-button" onclick="logout()">LOGOUT</button> 
+    </div>
+      <iframe id="contentFrame" src="profile.html" width="100%" height="100%"></iframe>
+  </div>
+
+  <script>
+      function loadContent(url) {
+          document.getElementById("contentFrame").src = url;
+      }
+      function logout() {
+      window.location.href = "index.html"; 
+    }
+  </script>
+</body>
+</html>

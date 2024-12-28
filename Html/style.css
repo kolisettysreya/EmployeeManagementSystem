@@ -1,0 +1,38 @@
+body{
+    background-color: black;
+    max-width: 100%;
+
+}
+.full-width-image {
+    width: 100%; 
+    height: auto; 
+    max-width: 100%; 
+    object-fit: cover; 
+}
+main {
+    padding: 2rem;
+    text-align: center;
+}
+form{
+        color: white;
+        max-width: 300px;
+        margin: 2rem auto;
+        background: hsl(240, 67%, 60%);
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius:5px;
+    
+}
+label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+
+}
+button{
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 90%;
+}

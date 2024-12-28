@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee page</title>
+    <style>
+        .contactForm {
+            margin-top: 50px;
+            background-color: #4c50c2;
+            max-width: 50%;
+            margin: 0 auto; 
+            padding: 20px;
+            border-radius: 5px; 
+        }
+
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .inputBox input[type="text"],
+        .inputBox textarea {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .inputBox span {
+            position: relative;
+            top: 12px;
+            left: 10px;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .inputBox input[type="text"]:focus,
+        .inputBox textarea:focus {
+            border-color: hsl(120, 8%, 8%);
+            outline: none;
+        }
+
+        .inputBox input[type="text"]:focus ~ span,
+        .inputBox textarea:focus ~ span {
+            top: -5px;
+            font-size: 12px;
+            color: hsl(120, 7%, 5%);
+        }
+
+        .inputBox .submit {
+            background-color: hsl(57, 77%, 45%);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">EMPLOYEE</h1>
+    <div class="contactForm">
+        <form>
+            <h2></h2>
+            <div class="inputBox">
+                <input type="text" name="" required>
+                <span><h3>Full Name</h3></span>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="" required>
+                <span><h3>Email</h3></span>
+            </div>
+            <div class="inputBox">
+                <textarea required></textarea>
+                <span><h3>Details</h3></span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" name="" value="Submit" class="submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
